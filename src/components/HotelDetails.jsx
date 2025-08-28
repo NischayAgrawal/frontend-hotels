@@ -2,7 +2,7 @@ import useFetch from "../useFetch";
 
 const HotelDetails = (props) => {
   const { data, loading, error } = useFetch(
-    `http://localhost:3000/hotels/${props.name}`
+    `https://backend-hotels-two.vercel.app/hotels/${props.name}`
   );
   // console.log(data);
 
