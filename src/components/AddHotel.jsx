@@ -68,13 +68,16 @@ const AddHotel = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:3000/hotels", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(hotelData),
-      });
+      const response = await fetch(
+        "https://backend-hotels-two.vercel.app/hotels",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(hotelData),
+        }
+      );
 
       if (!response.ok) {
         throw "Failed to add hotel.";
